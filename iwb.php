@@ -1,9 +1,11 @@
-<?php header('Content-Type: application/rss+xml; charset=ISO-8859-1'); ?>
-<?xml version="1.0" encoding="UTF-8" ?>
+<?php
+header('Content-Type: application/rss+xml;');
+echo '<?xml version="1.0" encoding="UTF-8" ?>';
+?>
 <rss version="2.0">
 <channel>
 	<title>Iwanbanaran.com</title>
-	<link>https://iwanbanaran.com</link>
+	<link>http://iwanbanaran.com</link>
 	<?php
 	$json = file_get_contents('http://iwanbanaran.com/wp-json/wp/v2/posts?context=embed');
 	$posts = json_decode($json);
